@@ -1,0 +1,32 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../assets/bg_image.jpg");
+  background-size: cover;
+}
+.sub-container {
+  width: 400px;
+  position: absolute;
+  left: 13rem;
+  bottom: 15rem;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+}
+p {
+  color: white;
+}
+button {
+  background-color: #3f87ad;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 2rem auto;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+}
+h1 {
+  color: white;
+}

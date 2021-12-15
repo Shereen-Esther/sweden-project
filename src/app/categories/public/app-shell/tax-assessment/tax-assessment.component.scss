@@ -1,0 +1,64 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+.nav {
+  padding: 1rem;
+  width: 100%;
+  height: 10%;
+  border-bottom: 1px solid rgb(164, 160, 160, 0.5);
+  position: relative;
+}
+.main {
+  width: 100%;
+  height: 90%;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+form {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 15px;
+}
+.radio-input {
+  display: none;
+}
+.radio-label {
+  color: #5b5b5e;
+  font-weight: normal;
+  cursor: pointer;
+}
+.radio-input[type="radio"]:checked + .radio-label {
+  background: #eaeaea;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  color: rgba(8, 4, 49);
+  font-weight: 700;
+}
+table {
+  width: 100%;
+  height: 70%;
+  overflow: scroll;
+}
+.spinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.f {
+  display: flex;
+  border: 1px solid rgb(164, 160, 160, 0.5);
+  background-color: rgb(109, 131, 165, 0.2);
+  margin-bottom: 2rem;
+  padding: 2rem auto;
+}
+.valueText {
+  margin: auto auto;
+}
+h3 {
+  margin: 1rem auto;
+}

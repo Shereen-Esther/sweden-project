@@ -1,0 +1,27 @@
+<div class="f">
+    <div class="valueText">
+        <h3> CODE</h3>
+        <div *ngFor="let d of t.values">
+            {{ t.code }}
+        </div>
+    </div>
+    <div class="valueText">
+        <h3>TEXT</h3>
+        <div *ngFor="let d of t.values">
+
+            {{ t.text }}
+        </div>
+    </div>
+    <div class="valueText">
+        <h3> VALUES</h3>
+        <div *ngFor="let d of t.values">
+            {{ d }}
+        </div>
+    </div>
+    <div class="valueText">
+        <h3> VALUE TEXTS</h3>
+        <div *ngFor="let d of t.valueTexts">
+            {{ d }}
+        </div>
+    </div>
+</div>

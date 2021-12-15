@@ -1,0 +1,60 @@
+<ng-template #loading>
+    <div class="spinner">
+        <img src="https://c.tenor.com/tEBoZu1ISJ8AAAAC/spinning-loading.gif">
+    </div>
+</ng-template>
+<div class="container">
+    <div class="nav">
+        <form class="flex " [formGroup]="tabs">
+            <div class="radio-btn" *ngFor="let t of tabList; let i = index">
+                <input class="radio-input" [value]="t.tab" [id]="t.tab" formControlName="tabValue" type="radio" />
+                <label (click)="getData(t)" class="radio-label" [for]="t.tab">
+                    {{ t.tab }}
+                </label>
+            </div>
+        </form>
+    </div>
+    <div class="main" *ngIf="temp; else loading">
+        <ng-container *ngIf="tabs.value.tabValue === 'Swedish People'">
+            <h3> {{temp.title}} </h3>
+            <app-common-field [t]="temp.variables[0]"></app-common-field>
+            <app-common-field [t]="temp.variables[1]"></app-common-field>
+            <app-common-field [t]="temp.variables[2]"></app-common-field>
+            <app-common-field [t]="temp.variables[3]"></app-common-field>
+        </ng-container>
+        <ng-container *ngIf="tabs.value.tabValue === 'Region'">
+            <h3>{{temp.title}}</h3>
+            <app-common-field [t]="temp.variables[0]"></app-common-field>
+            <app-common-field [t]="temp.variables[1]"></app-common-field>
+            <app-common-field [t]="temp.variables[2]"></app-common-field>
+            <app-common-field [t]="temp.variables[3]"></app-common-field>
+        </ng-container>
+        <ng-container *ngIf="tabs.value.tabValue === 'Average People'">
+            <h3>{{temp.title}}</h3>
+            <app-common-field [t]="temp.variables[0]"></app-common-field>
+            <app-common-field [t]="temp.variables[1]"></app-common-field>
+            <app-common-field [t]="temp.variables[2]"></app-common-field>
+            <app-common-field [t]="temp.variables[3]"></app-common-field>
+        </ng-container>
+        <ng-container *ngIf="tabs.value.tabValue === 'Percentage'">
+            <h3> {{temp.title}}</h3>
+            <app-common-field [t]="temp.variables[0]"></app-common-field>
+            <app-common-field [t]="temp.variables[1]"></app-common-field>
+            <app-common-field [t]="temp.variables[2]"></app-common-field>
+            <app-common-field [t]="temp.variables[3]"></app-common-field>
+        </ng-container>
+        <ng-container *ngIf="tabs.value.tabValue === 'Floor Space'">
+            <h3>{{temp.title}}</h3>
+            <app-common-field [t]="temp.variables[0]"></app-common-field>
+            <app-common-field [t]="temp.variables[1]"></app-common-field>
+            <app-common-field [t]="temp.variables[2]"></app-common-field>
+            <app-common-field [t]="temp.variables[3]"></app-common-field>
+        </ng-container>
+        <ng-container *ngIf="tabs.value.tabValue === 'DeSo'">
+            <h3>{{temp.title}}</h3>
+            <app-common-field [t]="temp.variables[0]"></app-common-field>
+            <app-common-field [t]="temp.variables[1]"></app-common-field>
+            <app-common-field [t]="temp.variables[2]"></app-common-field>
+        </ng-container>
+    </div>
+</div>
